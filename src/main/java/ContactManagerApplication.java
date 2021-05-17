@@ -3,7 +3,7 @@ public class ContactManagerApplication {
         System.out.println("Contacts manager application");
         /*
         Contact
-        ContactFileDataAccessObject
+        ContactFileDataAccessObject <---
         Menu
         MenuItem
          */
