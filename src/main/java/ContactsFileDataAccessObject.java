@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ContactsFileDataAccessObject {
@@ -34,4 +35,17 @@ public class ContactsFileDataAccessObject {
         fileContents.add(String.format("%s|%s|%s", contact.getFirstName(),contact.getLastName(),contact.getPhoneNumber()));
         Files.write(dataFile, fileContents);
     }
+
+//    public List<Contact> getAll() throws IOException {
+//        //Get all lines from the contacts.txt file.
+//        List<String> fileContents = Files.readAllLines(dataFile);
+//
+//        //Convert all lines into actual instances of the class.
+//        List<Contact> allContacts = new ArrayList<>();
+//        for (String line : fileContents) {
+//            String[] contactPartsFromLine = line.split("\\|");
+//            allContacts.add(new Contact(contactPartsFromLine[0]),contactPartsFromLine[1], contactPartsFromLine[2]);
+//        }
+//        return allContacts;
+//    }
 }
